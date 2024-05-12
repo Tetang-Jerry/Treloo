@@ -7,19 +7,20 @@
     <title>Treloo</title>
 </head>
 <body>
-    <header class="bg-white relative">
-        <div id="mobile_header" class="pt-5 flex justify-between w-[95%] mx-auto">
+    <header id="header" class="bg-white h-[80px] transition-all duration-300 ease-in-out w-full  fixed">
+      <div class="relative">
+        <div id="mobile_header" class="pt-5 flex z-50 absolute left-2 justify-between w-[95%] mx-auto">
             <div>
-                <img src="../assets/images/logo.svg" alt="">
+                <img src="../assets/images/logo.svg" alt="" onclick="closemenu()">
             </div>
             <div>
-                <ion-icon name="menu-outline" class="text-5xl text-black"></ion-icon>
+                <ion-icon name="menu-outline" id="menu_open" onclick="openHamburger()" class="text-5xl text-black"></ion-icon>
             </div>
         </div>
 
         <!-- -----------------HAMBURGER START----------------- -->
 
-        <div id="hmburger" class="bg-white h-screen mx-3">
+        <div id="hamburger" class="bg-white h-screen w-full px-3 transform transition-all duration-300 ease-in-out z-10 delay-100  top-20 absolute hidden">
             <div class="mt-1 flex flex-col mb-10">
                 <div class="flex justify-between border-gray-200 border-y-2  py-5">
                     <p class="text-2xl">Fonctionnalités</p>
@@ -41,13 +42,54 @@
                     <ion-icon name="chevron-forward-outline" class="text-2xl"></ion-icon>
                 </div>
             </div>
-            <a href="#" class="py-4 px-20 text-white bg-blue-600 ">Obtenir Trello Gratuitement</a>
-            <a href="#" class="py-4 px-20 border-2 border-blue-600 mt-10 block">Connexion</a>
+            <a href="#" class="butn_blue">Obtenir Trello Gratuitement</a>
+            <a href="#" class="py-4 px-20 border-2 border-blue-600 mt-10 block text-center">Connexion</a>
         </div>
+      </div>
     </header>
-    <main></main>
+    <main class="pt-[80px]">
+        <section class="h-[120px] bg-[#deebff] px-3 py-2 flex items-center"> 
+            <p class="text-center">Accelerate your teams' work with Atlassian Intelligence (AI) features 🤖 now available for all Premium and Enterprise!
+
+                <a href="#" class="text-blue-700 underline">Learn more</a>
+            </p>
+            
+        </section>
+
+        <section class="h-[480px] bg-gradient-to-r from-[#7846ac] to-[#d34eb2] px-3 text-white flex place-items-end">
+            <div class="flex flex-col gap-4">
+                <h1 class=" text-3xl text-center font-semibold">Trello rassemble vos tâches, vos coéquipiers et vos outils</h1>
+                <p class="text-center text-2xl mb-5">Centralisez tout votre contenu, même dans une équipe distribuée.</p>
+                <a href="#" class="butn_blue rounded-md hover:bg-blue-900 transition-all duration-300 ease-in-out">Inscrivez-vous, c'est gratuit !</a>
+                <div class="flex justify-center">
+                    <button class="underline">Visionner la video</button>
+
+                </div>
+               <div>
+                <!-- Image -->
+               </div>
+
+               <div>
+                <!-- video - popup -->
+               </div>
+            </div>
+        </section>
+
+        <section class="h-screen bg-white px-3 pt-5">
+            <h2 class="capitalize text-xl font-semibold">Initiation à trello</h2>
+            <h1 class="text-3xl font-semibold mt-2 mb-5">Un centre de productivité</h1>
+            <p class="">Simples, flexibles et puissants. Les tableaux, les listes et les cartes suffisent pour obtenir une vue claire de qui fait quoi et des tâches qu'il vous reste à faire. Découvrez-en plus dans notre
+
+                <a href="#" class="text-blue-700 underline">guide de mise en route.</a>
+            </p>
+            <div>
+                <!-- Image -->
+               </div>
+        </section>
+    </main>
     <footer></footer>
 
+<script src="../assets/JS/hamburger.js" defer></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
