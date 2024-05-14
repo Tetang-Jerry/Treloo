@@ -1,16 +1,8 @@
-
-// Splide Team
-
-function splideTeam() {
-  // Cible le composant grâce à ses classes 
-  let splides = $('.splide.is-team'); 
-  for ( let i = 0, splideLength = splides.length; i < splideLength; i++ ) {
-    // Ouvre les paramètres du slider
-    new Splide( splides[ i ], {
-      // Personnalisez les options souhaitées ici
+document.addEventListener('DOMContentLoaded', function () {
+    new Splide('#div-slider', {
+      type   : 'loop',
+      perPage: 1,
+      pagination: true, // Enable pagination
+      arrows: false, // Disable default arrows
     }).mount();
-  }
-}
-splideTeam();
-
-
+  });

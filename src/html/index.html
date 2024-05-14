@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/css/splide-core.min.css" integrity="sha512-cSogJ0h5p3lhb//GYQRKsQAiwRku2tKOw/Rgvba47vg0+iOFrQ94iQbmAvRPF5+qkF8+gT7XBct233jFg1cBaQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
     <link rel="stylesheet" href="../assets/css/output.css">
     <title>Treloo</title>
 </head>
@@ -83,39 +83,84 @@
             </div>
         </section>
 
-        <section class="h-screen bg-white px-3 pt-5">
-            <h2 class="capitalize text-xl font-semibold">Initiation à trello</h2>
-            <h1 class="text-3xl font-semibold mt-2 mb-5">Un centre de productivité</h1>
-            <p class="">Simples, flexibles et puissants. Les tableaux, les listes et les cartes suffisent pour obtenir une vue claire de qui fait quoi et des tâches qu'il vous reste à faire. Découvrez-en plus dans notre
+        <section class="h-auto  bg-white  pt-10">
+            <h2 class="uppercase text-xl font-semibold px-3">Initiation à trello</h2>
+            <h1 class="text-3xl font-semibold mt-2 mb-5 px-3">Un centre de productivité</h1>
+            <p class="mb-10  px-3">Simples, flexibles et puissants. Les tableaux, les listes et les cartes suffisent pour obtenir une vue claire de qui fait quoi et des tâches qu'il vous reste à faire. Découvrez-en plus dans notre
 
                 <a href="#" class="text-blue-700 underline">guide de mise en route.</a>
             </p>
-            <div class="splide">
+            <div id="div-slider" class="splide">
                 <div class="splide__track">
-                  <div class="splide__list">
-                    <div class="splide__slide">
-                        <div class="flex flex-col gap-5">
-                            <div>
-                                <img src="../assets/images/Carousel_Image_Boards_2x.png" alt="">
-                            </div>
-                            <div></div>
+                  <ul class="splide__list">
+                    <li class="splide__slide">
+                      <div class="slide-content">
+                        <div class="rounded-md">
+                            <img src="../assets/images/Carousel_Image_Boards_2x.png" alt="" class="rounded-md">
                         </div>
-                    </div>
-                    <div class="splide__slide">Contenu de la slide 2</div>
-                    <div class="splide__slide">Contenu de la slide 3</div>
-                  </div>
+                        <div class="flex gap-0 w-full">
+                            <div class="h-[210px] w-10 bg-cyan-500 rounded-l-md"> 
+                                
+                            </div>
+                            <div class="h-[210px] bg-white px-3 pt-5">
+                                <h3 class="font-semibold mb-2">LISTES</h3>
+                                <p>Définissez les différentes phases d'une tâche. Au début, ne cherchez pas plus loin que «&nbsp;À faire&nbsp;», «&nbsp;En cours&nbsp;» et «&nbsp;Terminé&nbsp;». Vous pouvez aussi élaborer un flux de travail personnalisé pour répondre aux besoins de votre équipe. Il n'y a pas de mauvaise façon de faire dans Trello.</p>
+                            </div>
+                        </div>
+                      </div>
+                    </li>
+                   
+                    <li class="splide__slide">
+                        <div class="slide-content">
+                          <div class="rounded-md">
+                              <img src="../assets/images/Carousel_Image_Lists_2x.png" alt="" class="rounded-md">
+                          </div>
+                          <div class="flex gap-0 w-full">
+                              <div class="h-[200px] w-8 bg-cyan-500 rounded-l-md"> 
+                                  
+                              </div>
+                              <div class="h-[200px] bg-white px-3 pt-5">
+                                  <h3 class="font-semibold mb-2">Tableaux</h3>
+                                  <p>Les tableaux&nbsp;Trello garantissent l'organisation des tâches et font avancer le travail. Découvrez en un coup d'œil toutes les tâches à réaliser et terminées.</p>
+                              </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="splide__slide">
+                        <div class="slide-content">
+                          <div class="rounded-md">
+                              <img src="../assets/images/Carousel_Image_Cards_2x.png" alt="" class="rounded-md">
+                          </div>
+                          <div class="flex gap-0 w-full">
+                              <div class="h-[210px] w-10 bg-cyan-500 rounded-l-md"> 
+                                  
+                              </div>
+                              <div class="h-[210px] bg-white px-3 pt-5">
+                                  <h3 class="font-semibold mb-2">Cartes</h3>
+                                  <p>Les cartes représentent des tâches et des idées, et peuvent contenir toutes les informations nécessaires pour faire votre travail. À mesure que vous avancez, déplacez les cartes dans les listes pour afficher leur état.</p>
+                              </div>
+                          </div>
+                        </div>
+                      </li>
+                    <!-- Add more slides as needed -->
+                  </ul>
                 </div>
+                <div class="splide__pagination mb-14"></div> <!-- Pagination container -->
               </div>
+        </section>
+
+        <section class="h-screen pt-10 pl-3 bg-white">
+            <h2  class="uppercase text-xl font-semibold px-3">Trello en action</h2>
+            <h1  class="text-3xl font-semibold mt-2 mb-5 px-3">Des flux de travail pour les projets de toutes envergures</h1>
         </section>
     </main>
     <footer></footer>
 
 <script src="../assets/JS/hamburger.js" defer></script>
+<script src="../assets/JS/slide.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-<!--- Importer Splide JS Autoscroll--->
-
-<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
 </body>
 </html>

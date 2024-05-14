@@ -40,5 +40,40 @@
         }
     }
 
+    .slide-content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-bottom: 100px;
+        align-items: center;
+        justify-content: center;
+        height: auto; /* Adjust the height as needed */
+       padding: 0 10px 100px 10px;
+        background-color: #e7fcff;
+         /* Optional padding */
+        box-sizing: border-box;
+        
+      }
+
+
+      
+    .splide__pagination__page {
+        width: 8px;
+        height: 8px;
+        margin: 0 10px;
+        background: black;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 300ms ease;
+      }
+  
+      .splide__pagination__page.is-active {
+        background: #333;
+        width: 50px;
+        border-radius: 30px;
+        transition: all 300ms ease;
+        
+      }
+
  
 }
