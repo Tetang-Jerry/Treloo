@@ -7,4 +7,38 @@
     .butn_blue {
         @apply py-4 px-20 text-white bg-blue-600;
     }
+
+    .custom-shape-divider-bottom-1715594030 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        z-index: 5;
+    }
+    
+    .custom-shape-divider-bottom-1715594030 svg {
+        position: relative;
+        display: block;
+        width: calc(123% + 1.3px);
+        height: 167px;
+        transform: rotateY(180deg);
+        z-index: 5;
+
+    }
+    
+    .custom-shape-divider-bottom-1715594030 .shape-fill {
+        fill: #FFFFFF;
+    }
+    
+    /** For mobile devices **/
+    @media (max-width: 767px) {
+        .custom-shape-divider-bottom-1715594030 svg {
+            width: calc(139% + 1.3px);
+            height: 136px;
+        }
+    }
+
+ 
 }

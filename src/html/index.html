@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/css/splide-core.min.css" integrity="sha512-cSogJ0h5p3lhb//GYQRKsQAiwRku2tKOw/Rgvba47vg0+iOFrQ94iQbmAvRPF5+qkF8+gT7XBct233jFg1cBaQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../assets/css/output.css">
     <title>Treloo</title>
 </head>
 <body>
-    <header id="header" class="bg-white h-[80px] transition-all duration-300 ease-in-out w-full  fixed">
+    <header id="header" class="bg-white h-[80px] transition-all duration-300 ease-in-out w-full z-50 fixed">
       <div class="relative">
         <div id="mobile_header" class="pt-5 flex z-50 absolute left-2 justify-between w-[95%] mx-auto">
             <div>
-                <img src="../assets/images/logo.svg" alt="" onclick="closemenu()">
+                <img src="../assets/images/logo.svg" alt="" >
             </div>
             <div>
-                <ion-icon name="menu-outline" id="menu_open" onclick="openHamburger()" class="text-5xl text-black"></ion-icon>
+                <ion-icon name="menu-outline" id="menu_open" onclick="openHamburger()" class="text-5xl  text-black"></ion-icon>
+                <ion-icon name="close-outline" id="menu_close" onclick="closemenu()" class="text-5xl text-black absolute right-0 hidden"></ion-icon>
             </div>
         </div>
 
@@ -48,7 +50,8 @@
       </div>
     </header>
     <main class="pt-[80px]">
-        <section class="h-[120px] bg-[#deebff] px-3 py-2 flex items-center"> 
+        <section class="h-[120px] bg-[#deebff] px-3 py-2 flex items-center relative"> 
+          
             <p class="text-center">Accelerate your teams' work with Atlassian Intelligence (AI) features 🤖 now available for all Premium and Enterprise!
 
                 <a href="#" class="text-blue-700 underline">Learn more</a>
@@ -56,21 +59,26 @@
             
         </section>
 
-        <section class="h-[480px] bg-gradient-to-r from-[#7846ac] to-[#d34eb2] px-3 text-white flex place-items-end">
+        <section class="h-[850px] pt-40 bg-gradient-to-r from-[#7846ac] to-[#d34eb2] px-3 text-white flex relative">
+            <div class="custom-shape-divider-bottom-1715594030">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+                </svg>
+            </div>
             <div class="flex flex-col gap-4">
                 <h1 class=" text-3xl text-center font-semibold">Trello rassemble vos tâches, vos coéquipiers et vos outils</h1>
                 <p class="text-center text-2xl mb-5">Centralisez tout votre contenu, même dans une équipe distribuée.</p>
                 <a href="#" class="butn_blue rounded-md hover:bg-blue-900 transition-all duration-300 ease-in-out">Inscrivez-vous, c'est gratuit !</a>
-                <div class="flex justify-center">
-                    <button class="underline">Visionner la video</button>
-
+                <div class="flex gap-3 justify-center group transition-all duration-300 ease-in-out">
+                    <button class="underline group-hover:mr-2 transition-all duration-300 ease-in-out">Visionner la video</button>
+                    <ion-icon name="play-circle-outline" class="text-white text-3xl mt-1 font-bold"></ion-icon>
                 </div>
                <div>
-                <!-- Image -->
+                <img src="../assets/images/TrelloUICollage_4x_1.png" alt="" class="z-40 absolute bottom-0">
                </div>
 
-               <div>
-                <!-- video - popup -->
+               <div id="video-popup" class="">
+                  <video src=""></video>
                </div>
             </div>
         </section>
@@ -82,9 +90,22 @@
 
                 <a href="#" class="text-blue-700 underline">guide de mise en route.</a>
             </p>
-            <div>
-                <!-- Image -->
-               </div>
+            <div class="splide">
+                <div class="splide__track">
+                  <div class="splide__list">
+                    <div class="splide__slide">
+                        <div class="flex flex-col gap-5">
+                            <div>
+                                <img src="../assets/images/Carousel_Image_Boards_2x.png" alt="">
+                            </div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="splide__slide">Contenu de la slide 2</div>
+                    <div class="splide__slide">Contenu de la slide 3</div>
+                  </div>
+                </div>
+              </div>
         </section>
     </main>
     <footer></footer>
@@ -92,5 +113,9 @@
 <script src="../assets/JS/hamburger.js" defer></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+<!--- Importer Splide JS Autoscroll--->
+
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
 </body>
 </html>
