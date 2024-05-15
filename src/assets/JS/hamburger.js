@@ -32,4 +32,27 @@ function closemenu() {
 
     open.classList.remove('hidden');
     close.classList.add('hidden')
+
+    let submenu = document.getElementById('submenu1');
+    submenu.classList.remove('translate-x-full');
+
+     submenu.classList.add('hidden')
+
+
+     let logo = document.getElementById('logo');
+
+     let back = document.getElementById("back")
+ 
+     setTimeout(() => {
+         logo.classList.remove('-translate-x-full');
+ 
+         back.classList.add('translate-x-full')
+     },200)
+ 
+     setTimeout(() => {
+         logo.classList.remove('opacity-0');
+         
+         back.classList.add("opacity-0")
+     },300)
+
 }

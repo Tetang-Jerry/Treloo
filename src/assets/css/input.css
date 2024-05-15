@@ -74,6 +74,16 @@
         transition: all 300ms ease;
         
       }
-
+      .splide__progress {
+        position: relative;
+        height: 4px; /* Adjust the height of the progress bar */
+        background: #a01f1f; /* Background color of the progress bar */
+      }
+  
+      .splide__progress__bar {
+        height: 20px;
+        background: #333; /* Color of the progress bar */
+        transition: width 0.3s;
+      }
  
 }
