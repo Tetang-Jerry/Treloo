@@ -13,6 +13,7 @@ function submenu1_open() {
 
     if(submenu.classList.contains('hidden')) {
         submenu.classList.remove('hidden')
+        
     }
 
     setTimeout(() => {
