@@ -9,6 +9,7 @@
     <script src="../assets/JS/hamburger.js" defer></script>
     <script src="../assets/JS/slide.js" defer></script>
     <script src="../assets/JS/submenu.js"></script>
+    <script src="../assets/JS/common.js"></script>
     <title>Treloo</title>
 </head>
 
@@ -42,11 +43,11 @@
                         <p class="text-2xl">Fonctionnalités</p>
                         <ion-icon name="chevron-forward-outline" class="text-2xl"></ion-icon>
                     </div>
-                    <div class="flex justify-between border-gray-200 border-b-2  py-5">
+                    <div onclick="submenu2_open()" class="flex justify-between border-gray-200 border-b-2  py-5">
                         <p class="text-2xl">Solutions</p>
                         <ion-icon name="chevron-forward-outline" class="text-2xl"></ion-icon>
                     </div>
-                    <div class="flex justify-between border-gray-200 border-b-2  py-5">
+                    <div onclick="submenu3_open()" class="flex justify-between border-gray-200 border-b-2  py-5">
                         <p class="text-2xl">Offres</p>
                         <ion-icon name="chevron-forward-outline" class="text-2xl"></ion-icon>
                     </div>
@@ -148,7 +149,229 @@
                             productivité.
                         </p>
 
-                        <a href="#" class="px-4 py-4 bg-white border border-black font-semibold rounded-md hover:bg-indigo-100 transition-all duration-300 ease-in-out">Découvrir Trello</a>
+                        <a href="#" class="btn_white">Découvrir Trello</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="submenu2" class="bg-white transition-all duration-300 ease-in-out translate-x-full  h-screen w-full px-3 z-40 absolute top-20 overflow-y-scroll">
+                <h1 class="py-5  border-gray-200 border-y-2 font-semibold text-xl">Trouvez l'inspiration dans ces mini-guides pratiques Trello préconçus pour toutes les équipes</h1>
+                <div>
+                    <a href="#" class="py-5 block border-gray-200 border-b-2 ">
+                        <div class="flex gap-3 mb-4">
+                            <div>
+                                <img src="../assets/images/microphone.svg" alt="" class="w-5 mt-1.5">
+                            </div>
+                            <div>
+                                <p class="text-xl font-semibold">Equipes marketing</p>
+                            </div>
+                        </div>
+                        <p class="text-xs">
+                            Que ce soit pour le lancement d'un nouveau produit ou d'une nouvelle campagne, ou encore pour la création de contenu, Trello contribue au succès des équipes marketing.
+                        </p>
+                    </a>
+
+                    <a href="#" class="py-5 block border-gray-200 border-b-2 ">
+                        <div class="flex gap-3 mb-4">
+                            <div>
+                                <img src="../assets/images/box.svg" alt="" class="w-5">
+                            </div>
+                            <div>
+                                <p class="text-xl font-semibold">Gestion de produit</p>
+                            </div>
+                        </div>
+                        <p class="text-xs">
+                            Utilisez les tableaux de gestion et les fonctionnalités de calendrier de lancement de Trello pour simplifier les projets et processus complexes.
+                        </p>
+                    </a>
+
+                    <a href="#" class="py-5 block border-gray-200 border-b-2 ">
+                        <div class="flex gap-3 mb-4">
+                            <div>
+                                <img src="../assets/images/code.svg" alt="" class="mt-2 w-5">
+                            </div>
+                            <div>
+                                <p class="text-xl font-semibold">Equipes d'ingénierie</p>
+                            </div>
+                        </div>
+                        <p class="text-xs">
+                            Utilisez les tableaux de gestion et les fonctionnalités de calendrier de lancement de Trello pour simplifier les projets et processus complexes.
+                        </p>
+                    </a>
+
+                    <a href="#" class="py-5 block border-gray-200 border-b-2 ">
+                        <div class="flex gap-3 mb-4">
+                            <div>
+                                <img src="../assets/images/pen.svg" alt="" class="mt-1 w-5">
+                            </div>
+                            <div>
+                                <p class="text-xl font-semibold">Equipes de design</p>
+                            </div>
+                        </div>
+                        <p class="text-xs">
+                            Autonomisez vos équipes de design en utilisant Trello pour simplifier les demandes créatives et favoriser une collaboration transverse plus fluide.
+                        </p>
+                    </a>
+
+                    <a href="#" class="py-5 block border-gray-200 border-b-2 ">
+                        <div class="flex gap-3 mb-4">
+                            <div>
+                                <img src="../assets/images/Automatisation.svg" alt="" class="w-5">
+                            </div>
+                            <div>
+                                <p class="text-xl font-semibold">Equipes distribuée</p>
+                            </div>
+                        </div>
+                        <p class="text-xs">
+                            De la réalisation de leurs objectifs financiers à la gestion de leurs flux de travail, les petites entreprises prospèrent grâce à Trello.
+                        </p>
+                    </a>
+
+                    
+                    <a href="#" class="py-5 block border-gray-200 border-b-2 ">
+                        <div class="flex gap-3 mb-4">
+                            <div>
+                                <img src="../assets/images/thunder.svg" alt="" class="w-5">
+                            </div>
+                            <div>
+                                <p class="text-xl font-semibold">Strat-ups</p>
+                            </div>
+                        </div>
+                        <p class="text-xs">
+                            De la réalisation de leurs objectifs financiers à la gestion de leurs flux de travail, les petites entreprises prospèrent grâce à Trello.
+                        </p>
+                    </a>
+
+                    
+                    <a href="#" class="py-5 block border-gray-200 border-b-2 ">
+                        <div class="flex gap-3 mb-4">
+                            <div>
+                                <p class="text-xl font-semibold">Voir toutes les équipes</p>
+                            </div>
+                            <div>
+                                <ion-icon name="arrow-forward-outline" class="text-2xl text-blue-600 mt-1"></ion-icon>
+                            </div>
+                        </div>
+                    </a>
+
+                    <div class="bg-[#f7f5ff] h-[300px] mx-2 mt-4 px-5 pt-6">
+                        <h1 class="text-xl font-semibold mb-3">Notre produit en action</h1>
+                        <p class="text-[0.8rem] mb-12">
+                            Lisez nos cas d'usage pour tirer le meilleur parti de Trello dans votre équipe.
+                        </p>
+
+                        <a href="#" class="btn_white">Voir tout les cas pratiques</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="submenu3" class="bg-white transition-all duration-300 ease-in-out   h-screen w-full px-3 z-40 absolute top-20 overflow-y-scroll">
+          
+                <div>
+                    <a href="#" class="py-5 block border-gray-200 border-b-2 ">
+                        <div class="flex gap-3 mb-4">
+                            <div>
+                                <img src="../assets/images/microphone.svg" alt="" class="w-5 mt-1.5">
+                            </div>
+                            <div>
+                                <p class="text-xl font-semibold">Equipes marketing</p>
+                            </div>
+                        </div>
+                        <p class="text-xs">
+                            Que ce soit pour le lancement d'un nouveau produit ou d'une nouvelle campagne, ou encore pour la création de contenu, Trello contribue au succès des équipes marketing.
+                        </p>
+                    </a>
+
+                    <a href="#" class="py-5 block border-gray-200 border-b-2 ">
+                        <div class="flex gap-3 mb-4">
+                            <div>
+                                <img src="../assets/images/Automatisation.svg" alt="" class="w-5">
+                            </div>
+                            <div>
+                                <p class="text-xl font-semibold">Gestion de produit</p>
+                            </div>
+                        </div>
+                        <p class="text-xs">
+                            Utilisez les tableaux de gestion et les fonctionnalités de calendrier de lancement de Trello pour simplifier les projets et processus complexes.
+                        </p>
+                    </a>
+
+                    <a href="#" class="py-5 block border-gray-200 border-b-2 ">
+                        <div class="flex gap-3 mb-4">
+                            <div>
+                                <img src="../assets/images/Automatisation.svg" alt="" class="mt-2 w-5">
+                            </div>
+                            <div>
+                                <p class="text-xl font-semibold">Equipes d'ingénierie</p>
+                            </div>
+                        </div>
+                        <p class="text-xs">
+                            Utilisez les tableaux de gestion et les fonctionnalités de calendrier de lancement de Trello pour simplifier les projets et processus complexes.
+                        </p>
+                    </a>
+
+                    <a href="#" class="py-5 block border-gray-200 border-b-2 ">
+                        <div class="flex gap-3 mb-4">
+                            <div>
+                                <img src="../assets/images/pen.svg" alt="" class="mt-1 w-5">
+                            </div>
+                            <div>
+                                <p class="text-xl font-semibold">Equipes de design</p>
+                            </div>
+                        </div>
+                        <p class="text-xs">
+                            Autonomisez vos équipes de design en utilisant Trello pour simplifier les demandes créatives et favoriser une collaboration transverse plus fluide.
+                        </p>
+                    </a>
+
+                    <a href="#" class="py-5 block border-gray-200 border-b-2 ">
+                        <div class="flex gap-3 mb-4">
+                            <div>
+                                <img src="../assets/images/Automatisation.svg" alt="" class="w-5">
+                            </div>
+                            <div>
+                                <p class="text-xl font-semibold">Equipes distribuée</p>
+                            </div>
+                        </div>
+                        <p class="text-xs">
+                            De la réalisation de leurs objectifs financiers à la gestion de leurs flux de travail, les petites entreprises prospèrent grâce à Trello.
+                        </p>
+                    </a>
+
+                    
+                    <a href="#" class="py-5 block border-gray-200 border-b-2 ">
+                        <div class="flex gap-3 mb-4">
+                            <div>
+                                <img src="../assets/images/thunder.svg" alt="" class="w-5">
+                            </div>
+                            <div>
+                                <p class="text-xl font-semibold">Strat-ups</p>
+                            </div>
+                        </div>
+                        <p class="text-xs">
+                            De la réalisation de leurs objectifs financiers à la gestion de leurs flux de travail, les petites entreprises prospèrent grâce à Trello.
+                        </p>
+                    </a>
+
+                    
+                    <a href="#" class="py-5 block border-gray-200 border-b-2 ">
+                        <div class="flex gap-3 mb-4">
+                            <div>
+                                <p class="text-xl font-semibold">Voir toutes les équipes</p>
+                            </div>
+                            <div>
+                                <ion-icon name="arrow-forward-outline" class="text-2xl text-blue-600 mt-1"></ion-icon>
+                            </div>
+                        </div>
+                    </a>
+
+                    <div class="bg-[#f7f5ff] h-[300px] mx-2 mt-4 px-5 pt-6">
+                        <h1 class="text-xl font-semibold mb-3">Notre produit en action</h1>
+                        <p class="text-[0.8rem] mb-12">
+                            Lisez nos cas d'usage pour tirer le meilleur parti de Trello dans votre équipe.
+                        </p>
+
+                        <a href="#" class="btn_white">Voir tout les cas pratiques</a>
                     </div>
                 </div>
             </div>

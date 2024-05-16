@@ -1,3 +1,5 @@
+
+
 function openHamburger() {
     let hamburger = document.getElementById('hamburger');
 
@@ -18,6 +20,7 @@ function openHamburger() {
 
 }
 
+
 function closemenu() {
     let hamburger = document.getElementById('hamburger');
 
@@ -33,11 +36,15 @@ function closemenu() {
     open.classList.remove('hidden');
     close.classList.add('hidden')
 
-    let submenu = document.getElementById('submenu1');
-    submenu.classList.remove('translate-x-full');
+  
 
-     submenu.classList.add('hidden')
-
+     if(currentSubmenu !== null) {
+        let submenu = document.getElementById(currentSubmenu);
+        submenu.classList.remove('translate-x-full');
+    
+         submenu.classList.add('hidden')
+     }
+ 
 
      let logo = document.getElementById('logo');
 
@@ -55,4 +62,5 @@ function closemenu() {
          back.classList.add("opacity-0")
      },300)
 
+    currentSubmenu = null
 }

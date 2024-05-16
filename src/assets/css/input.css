@@ -8,6 +8,10 @@
         @apply py-4 px-20 text-white bg-blue-600;
     }
 
+    .btn_white {
+      @apply px-4 py-4 bg-white border border-black font-semibold rounded-md hover:bg-indigo-100 transition-all duration-300 ease-in-out
+    }
+
     .custom-shape-divider-bottom-1715594030 {
         position: absolute;
         bottom: 0;
