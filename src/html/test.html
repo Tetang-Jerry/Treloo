@@ -1,0 +1,159 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Splide Slider with Divs and Pagination</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+  <style>
+    .slide-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 200px; /* Adjust the height as needed */
+      background-color: #f5f5f5; /* Adjust the background color as needed */
+      border: 1px solid #ddd; /* Optional border */
+      padding: 20px; /* Optional padding */
+      box-sizing: border-box;
+    }
+
+    .splide__pagination__page {
+      width: 12px;
+      height: 12px;
+      margin: 0 4px;
+      background: #ddd;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .splide__pagination__page.is-active {
+      background: #333;
+    }
+  </style>
+</head>
+<body>
+  <div id="div-slider" class="splide">
+    <div class="splide__track">
+      <ul class="splide__list">
+        <li class="splide__slide">
+          <div class="slide-content">Content for Slide 1</div>
+        </li>
+        <li class="splide__slide">
+          <div class="slide-content">Content for Slide 2</div>
+        </li>
+        <li class="splide__slide">
+          <div class="slide-content">Content for Slide 3</div>
+        </li>
+     
+      </ul>
+    </div>
+    <div class="splide__pagination"></div> 
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      new Splide('#div-slider', {
+        type   : 'loop',
+        perPage: 1,
+        pagination: true, // Enable pagination
+        arrows: false, // Disable default arrows
+      }).mount();
+    });
+  </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiple Splide Sliders</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+  <style>
+    .slide-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 200px; /* Adjust the height as needed */
+      background-color: #f5f5f5; /* Adjust the background color as needed */
+      border: 1px solid #ddd; /* Optional border */
+      padding: 20px; /* Optional padding */
+      box-sizing: border-box;
+    }
+
+    .splide__progress {
+      position: relative;
+      height: 4px; /* Adjust the height of the progress bar */
+      background: #e0e0e0; /* Background color of the progress bar */
+    }
+
+    .splide__progress__bar {
+      height: 100%;
+      background: #333; /* Color of the progress bar */
+      transition: width 0.3s;
+    }
+  </style>
+</head>
+<body>
+  <!-- First Slider -->
+  <div id="div-slider-1" class="splide">
+    <div class="splide__track">
+      <ul class="splide__list">
+        <li class="splide__slide">
+          <div class="slide-content">Content for Slider 1 - Slide 1</div>
+        </li>
+        <li class="splide__slide">
+          <div class="slide-content">Content for Slider 1 - Slide 2</div>
+        </li>
+        <li class="splide__slide">
+          <div class="slide-content">Content for Slider 1 - Slide 3</div>
+        </li>
+      </ul>
+    </div>
+    <div class="splide__progress">
+      <div class="splide__progress__bar"></div>
+    </div>
+  </div>
+
+  <!-- Second Slider -->
+  <div id="div-slider-2" class="splide">
+    <div class="splide__track">
+      <ul class="splide__list">
+        <li class="splide__slide">
+          <div class="slide-content">Content for Slider 2 - Slide 1</div>
+        </li>
+        <li class="splide__slide">
+          <div class="slide-content">Content for Slider 2 - Slide 2</div>
+        </li>
+        <li class="splide__slide">
+          <div class="slide-content">Content for Slider 2 - Slide 3</div>
+        </li>
+      </ul>
+    </div>
+    <div class="splide__progress">
+      <div class="splide__progress__bar"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      new Splide('#div-slider-1', {
+        type: 'loop',
+        perPage: 1,
+        pagination: false, // Disable pagination
+        arrows: false, // Disable default arrows
+      }).mount();
+
+      new Splide('#div-slider-2', {
+        type: 'loop',
+        perPage: 1,
+        pagination: false, // Disable pagination
+        arrows: false, // Disable default arrows
+      }).mount();
+    });
+  </script>
+</body>
+</html>
