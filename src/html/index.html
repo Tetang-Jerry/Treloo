@@ -11,6 +11,7 @@
     <script src="../assets/JS/submenu.js"></script>
     <script src="../assets/JS/common.js"></script>
     <script src="../assets/JS/sl2.js" defer></script>
+    <script src="../assets/JS/range.js" defer></script>
     <title>Treloo</title>
 </head>
 
@@ -775,6 +776,26 @@
                     <a href="#" class="underline text-blue-700 hover:text-blue-900 transition-all duration-300 ease-in-out">En savoir plus sur Premium</a>
                 </div>
 
+                <div class="h-auto px-4 pt-5 pb-8 text-black bg-white border flex flex-col gap-5">
+                    <h1 class="font-bold">ENTREPRISE</h1>
+                    <div>
+                        <p  class="slider-value">$ <span id="moneyValue" class="text-5xl">17.50</span> USD</p>
+                    <p class="text-xs text-gray-500">par utilisateur et par mois, facturation annuelle ($210.00 prix annuel par utilisateur)</p>
+                    </div>
+                    <p>
+                        Pour les organisations qui cherchent à connecter le travail entre les équipes, tout en améliorant la sécurité et les contrôles.
+                    </p>
+                    <div class="slider-value">Cout estimer pour <span id="sliderValue" class="pb-1 border-b-2 border-black">50</span> utilisateurs</div>
+                    <input type="range" id="rangeSlider" min="0" max="100" value="0" oninput="updateSliderValue()">
+                    <div id="hid" class=" gap-1 hidden">
+                       <div class="flex">
+                        <ion-icon name="alert-circle" class="text-xl"></ion-icon>
+                        <p>Pour plus de 5000 utilisateurs, contactez le service commercial afin de connaître les tarifs</p>
+                       </div>
+                    </div>
+                    <a href="#" class="btn_white  w-fit border-blue-400">Contacter le service commercial</a>
+                    <a href="#" class="underline text-blue-700 hover:text-blue-900 transition-all duration-300 ease-in-out">En savoir plus sur commercial</a>
+                </div>
                
         </section>
     </main>

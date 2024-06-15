@@ -1021,6 +1021,18 @@ video {
   height: 440px;
 }
 
+.h-\[470px\] {
+  height: 470px;
+}
+
+.h-\[520px\] {
+  height: 520px;
+}
+
+.h-\[530px\] {
+  height: 530px;
+}
+
 .w-10 {
   width: 2.5rem;
 }
@@ -1166,6 +1178,10 @@ video {
 
 .gap-5 {
   gap: 1.25rem;
+}
+
+.gap-1 {
+  gap: 0.25rem;
 }
 
 .overflow-y-scroll {
@@ -1421,6 +1437,14 @@ video {
 
 .pt-\[80px\] {
   padding-top: 80px;
+}
+
+.pb-3 {
+  padding-bottom: 0.75rem;
+}
+
+.pb-1 {
+  padding-bottom: 0.25rem;
 }
 
 .text-center {
