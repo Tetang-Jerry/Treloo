@@ -1,4 +1,9 @@
 {
+  "name": "tt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "npx tailwindcss -i ./src/assets/css/input.css -o ./src/assets/css/output.css --watch"
   },
@@ -6,6 +11,8 @@
     "tailwindcss": "^3.4.3"
   },
   "dependencies": {
+
     "@splidejs/splide": "^4.1.4"
+
   }
 }
