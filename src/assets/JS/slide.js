@@ -14,10 +14,20 @@ document.addEventListener('DOMContentLoaded', function () {
         arrows: false, // Disable default arrows
         progress: true,
       }).mount();
+
+      new Splide('#div-slider3', {
+        type   : 'loop',
+        perPage: 1,
+        snap: true,
+        pagination: true, // Enable pagination
+        arrows: false, // Disable default arrows
+      }).mount();
     
 
   });
 
+
+ 
 
 
 //   var splide = new Splide( '#div-slider-2' );

@@ -35,6 +35,17 @@
     .custom-shape-divider-bottom-1715594030 .shape-fill {
         fill: #FFFFFF;
     }
+
+    .my-carousel-progress {
+      background: #ccc ;
+    }
+    
+    .my-carousel-progress-bar {
+      background: greenyellow;
+      height: 2px;
+      transition: width 400ms ease;
+      width: 0px;
+    }
     
     /** For mobile devices **/
     @media (max-width: 767px) {

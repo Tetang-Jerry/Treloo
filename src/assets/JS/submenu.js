@@ -1,6 +1,5 @@
 
 
-
 function submenu1_open() {
     let submenu = document.getElementById('submenu1');
 

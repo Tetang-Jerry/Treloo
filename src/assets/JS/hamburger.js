@@ -40,7 +40,7 @@ function closemenu() {
 
      if(currentSubmenu !== null) {
         let submenu = document.getElementById(currentSubmenu);
-        submenu.classList.remove('translate-x-full');
+        // submenu.classList.remove('translate-x-full');
     
          submenu.classList.add('hidden')
      }
