@@ -1,1 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+    <link rel="stylesheet" href="../assets/css/output.css">
+    <script src="../assets/JS/hamburger.js" defer></script>
+    <script src="../assets/JS/slide.js" defer></script>
+    <script src="../assets/JS/submenu.js"></script>
+    <script src="../assets/JS/common.js"></script>
+    <script src="../assets/JS/sl2.js" defer></script>
+    <script src="../assets/JS/range.js" defer></script>
+    <title>Treloo</title>
+</head>
+
+<body>
+    <header id="header" class="bg-white h-[80px] transition-all duration-300 ease-in-out w-full z-50 fixed">
+        <div id="mobile_header" class="relative h-full">
+            <div class="pt-5 flex z-50 absolute left-2 justify-between w-[95%] mx-auto">
+                <div>
+                    <img id="logo" src="../assets/images/logo.svg" alt=""
+                        class="ransition-all duration-300 ease-in-out">
+                    <div id="back" onclick="close_submenu()"
+                        class="opacity-0 gap-2 ransition-all duration-300 ease-in-out absolute top-8">
+                        <div class="flex">
+                            <ion-icon name="chevron-back-outline" class="text-2xl mt-1"></ion-icon>
+                            <p class="text-2xl font-semibold">Retour</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <ion-icon name="menu-outline" id="menu_open" onclick="openHamburger()"
+                        class="text-5xl  text-black"></ion-icon>
+                    <ion-icon name="close-outline" id="menu_close" onclick="closemenu()"
+                        class="text-5xl text-black absolute right-0 hidden"></ion-icon>
+                </div>
+            </div>
+
+            <!-- -----------------HAMBURGER START----------------- -->
+
+            <div id="hamburger"
+                class="bg-white h-screen w-full px-3  transform transition-all duration-300 ease-in-out z-10 delay-100  top-20 absolute hidden">
+                <div class="mt-1 flex flex-col mb-10">
+                    <div onclick="submenu1_open()" class="flex justify-between border-gray-200 border-y-2  py-5">
+                        <p class="text-2xl">Fonctionnalités</p>
+                        <ion-icon name="chevron-forward-outline" class="text-2xl"></ion-icon>
+                    </div>
+                    <div onclick="submenu2_open()" class="flex justify-between border-gray-200 border-b-2  py-5">
+                        <p class="text-2xl">Solutions</p>
+                        <ion-icon name="chevron-forward-outline" class="text-2xl"></ion-icon>
+                    </div>
+                    <div onclick="submenu3_open()" class="flex justify-between border-gray-200 border-b-2  py-5">
+                        <p class="text-2xl">Offres</p>
+                        <ion-icon name="chevron-forward-outline" class="text-2xl"></ion-icon>
+                    </div>
+                    <div class="flex justify-between border-gray-200 border-b-2  py-5">
+                        <a href="#" class="text-2xl">Tarifs</a>
+                    </div>
+                    <div onclick="submenu4_open()" class="flex justify-between border-gray-200 border-b-2  py-5">
+                        <p class="text-2xl">Ressources</p>
+                        <ion-icon name="chevron-forward-outline" class="text-2xl"></ion-icon>
+                    </div>
+                </div>
+                <a href="#" class="butn_blue">Obtenir Trello Gratuitement</a>
+                <a href="#" class="py-4 px-20 border-2 border-blue-600 mt-10 block text-center">Connexion</a>
+            </div>
+
+            <!-- --------------SUBMENU START------------------------- -->
+            <div id="submenu1"
+                class="bg-white transition-all duration-300 ease-in-out translate-x-full  h-screen w-full px-3 z-40 absolute top-20 overflow-y-scroll">
+                <h1 class="py-5  border-gray-200 border-y-2 font-semibold text-xl">Explorez les Fonctionnalités qui
+                    aident votre équipe à réussir</h1>
+                <div>
+                    <a href="#" class="py-5 block border-gray-200 border-b-2 ">
+                        <div class="flex gap-3 mb-4">
+                            <div>
+                                <img src="../assets/images/thunder.svg" alt="" class="w-5">
+                            </div>
+                            <div>
+                                <p class="text-xl font-semibold">Vues</p>
+                            </div>
+                        </div>
+                        <p class="text-xs">
+                            Visualisez les projets de votre équipe sous tous les angles
+                        </p>
+                    </a>
+
+                    <a href="#" class="py-5 block border-gray-200 border-b-2 ">
+                        <div class="flex gap-3 mb-4">
+                            <div>
+                                <img src="../assets/images/Automatisation.svg" alt="" class="w-5">
+                            </div>
+                            <div>
+                                <p class="text-xl font-semibold">Automatisation</p>
+                            </div>
+                        </div>
+                        <p class="text-xs">
+                            Automatisez les taches et flux de travail grace à Buttler
+                        </p>
+                    </a>
+
+                    <a href="#" class="py-5 block border-gray-200 border-b-2 ">
+                        <div class="flex gap-3 mb-4">
+                            <div>
+                                <img src="../assets/images/pen.svg" alt="" class="mt-2 w-5">
+                            </div>
+                            <div>
+                                <p class="text-xl font-semibold">Power-Ups</p>
+                            </div>
+                        </div>
+                        <p class="text-xs">
+                            Booster vos équipes en associant leurs outils préferés aux plug-ins Trello.
+                        </p>
+                    </a>
+
+                    <a href="#" class="py-5 block border-gray-200 border-b-2 ">
+                        <div class="flex gap-3 mb-4">
+                            <div>
+                                <img src="../assets/images/Automatisation.svg" alt="" class="mt-1 w-5">
+                            </div>
+                            <div>
+                                <p class="text-xl font-semibold">Modèles</p>
+                            </div>
+                        </div>
+                        <p class="text-xs">
+                            Offrez à votre équipes les clés de la réussite grace aux modèles faciles à utiliser des
+                            leaders du secteur et de la communauté Trello.
+                        </p>
+                    </a>
+
+                    <a href="#" class="py-5 block border-gray-200 border-b-2 ">
+                        <div class="flex gap-3 mb-4">
+                            <div>
+                                <img src="../assets/images/Integration.svg" alt="" class="w-5">
+                            </div>
+                            <div>
+                                <p class="text-xl font-semibold">Vues</p>
+                            </div>
+                        </div>
+                        <p class="text-xs">
+                            Trouvez les applications que votre équipe utilise déjà ou découvrir de nouvelles méthodes de
+                            travail dans Treloo
+                        </p>
+                    </a>
+
+                    <div class="bg-[#f7f5ff] h-[350px] mx-2 mt-4 px-5 pt-6">
+                        <h1 class="text-xl font-semibold mb-3">Découvrez Trello</h1>
+                        <p class="text-[0.8rem] mb-12">
+                            Grâce à Trello, votre équipe peut facilement avancer dans son travail. Quel que soit le
+                            projet, le flux de travail ou le type d'équipe, Trello peut vous aider à être organisé.
+                            C'est facile : inscrivez-vous, créez un tableau, et le tour est joué ! À vous la
+                            productivité.
+                        </p>
+
+                        <a href="#" class="btn_white">Découvrir Trello</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="submenu2"
+                class="bg-white transition-all duration-300 ease-in-out translate-x-full  h-screen w-full px-3 z-40 absolute top-20 overflow-y-scroll">
+                <h1 class="py-5  border-gray-200 border-y-2 font-semibold text-xl">Trouvez l'inspiration dans ces
+                    mini-guides pratiques Trello préconçus pour toutes les équipes</h1>
+                <div>
+                    <a href="#" class="py-5 block border-gray-200 border-b-2 ">
+                        <div class="flex gap-3 mb-4">
+                            <div>
+                                <img src="../assets/images/microphone.svg" alt="" class="w-5 mt-1.5">
+                            </div>
+                            <div>
+                                <p class="text-xl font-semibold">Equipes marketing</p>
+                            </div>
+                        </div>
+                        <p class="text-xs">
+                            Que ce soit pour le lancement d'un nouveau produit ou d'une nouvelle campagne, ou encore
+                            pour la création de contenu, Trello contribue au succès des équipes marketing.
+                        </p>
+                    </a>
+
+                    <a href="#" class="py-5 block border-gray-200 border-b-2 ">
+                        <div class="flex gap-3 mb-4">
+                            <div>
+                                <img src="../assets/images/box.svg" alt="" class="w-5">
+                            </div>
+                            <div>
+                                <p class="text-xl font-semibold">Gestion de produit</p>
+                            </div>
+                        </div>
+                        <p class="text-xs">
+                            Utilisez les tableaux de gestion et les fonctionnalités de calendrier de lancement de Trello
+                            pour simplifier les projets et processus complexes.
+                        </p>
+                    </a>
+
+                    <a href="#" class="py-5 block border-gray-200 border-b-2 ">
+                        <div class="flex gap-3 mb-4">
+                            <div>
+                                <img src="../assets/images/code.svg" alt="" class="mt-2 w-5">
+                            </div>
+                            <div>
+                                <p class="text-xl font-semibold">Equipes d'ingénierie</p>
+                            </div>
+                        </div>
+                        <p class="text-xs">
+                            Utilisez les tableaux de gestion et les fonctionnalités de calendrier de lancement de Trello
+                            pour simplifier les projets et processus complexes.
+                        </p>
+                    </a>
+
+                    <a href="#" class="py-5 block border-gray-200 border-b-2 ">
+                        <div class="flex gap-3 mb-4">
+                            <div>
+                                <img src="../assets/images/pen.svg" alt="" class="mt-1 w-5">
+                            </div>
+                            <div>
+                                <p class="text-xl font-semibold">Equipes de design</p>
+                            </div>
+                        </div>
+                        <p class="text-xs">
+                            Autonomisez vos équipes de design en utilisant Trello pour simplifier les demandes créatives
+                            et favoriser une collaboration transverse plus fluide.
+                        </p>
+                    </a>
+
+                    <a href="#" class="py-5 block border-gray-200 border-b-2 ">
+                        <div class="flex gap-3 mb-4">
+                            <div>
+                                <img src="../assets/images/Automatisation.svg" alt="" class="w-5">
+                            </div>
+                            <div>
+                                <p class="text-xl font-semibold">Equipes distribuée</p>
+                            </div>
+                        </div>
+                        <p class="text-xs">
+                            De la réalisation de leurs objectifs financiers à la gestion de leurs flux de travail, les
+                            petites entreprises prospèrent grâce à Trello.
+                        </p>
+                    </a>
+
+
+                    <a href="#" class="py-5 block border-gray-200 border-b-2 ">
+                        <div class="flex gap-3 mb-4">
+                            <div>
+                                <img src="../assets/images/thunder.svg" alt="" class="w-5">
+                            </div>
+                            <div>
+                                <p class="text-xl font-semibold">Strat-ups</p>
+                            </div>
+                        </div>
+                        <p class="text-xs">
+                            De la réalisation de leurs objectifs financiers à la gestion de leurs flux de travail, les
+                            petites entreprises prospèrent grâce à Trello.
+                        </p>
+                    </a>
+
+
+                    <a href="#" class="py-5 block border-gray-200 border-b-2 ">
+                        <div class="flex gap-3 mb-4">
+                            <div>
+                                <p class="text-xl font-semibold">Voir toutes les équipes</p>
+                            </div>
+                            <div>
+                                <ion-icon name="arrow-forward-outline" class="text-2xl text-blue-600 mt-1"></ion-icon>
+                            </div>
+                        </div>
+                    </a>
+
+                    <div class="bg-[#f7f5ff] h-[300px] mx-2 mt-4 px-5 pt-6">
+                        <h1 class="text-xl font-semibold mb-3">Notre produit en action</h1>
+                        <p class="text-[0.8rem] mb-12">
+                            Lisez nos cas d'usage pour tirer le meilleur parti de Trello dans votre équipe.
+                        </p>
+
+                        <a href="#" class="btn_white">Voir tout les cas pratiques</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="submenu3"
+                class="bg-white transition-all duration-300 ease-in-out translate-x-full  h-screen w-full px-3 z-40 absolute top-20 overflow-y-scroll">
+
+                <div>
+                    <a href="#" class="py-5 block border-gray-200 border-b-2 ">
+                        <div class="flex gap-3 mb-4">
+                            <div>
+                                <ion-icon name="bulb" class="text-cyan-300 text-2xl mt-1"></ion-icon>
+                            </div>
+                            <div>
+                                <p class="text-xl font-semibold">Standard</p>
+                            </div>
+                        </div>
+                        <p class="text-xs">
+                            For teams that need to manage more work and scale collaboration
+                        </p>
+                    </a>
+
+                    <a href="#" class="py-5 block border-gray-200 border-b-2 ">
+                        <div class="flex gap-3 mb-4">
+                            <div>
+                                <ion-icon name="star" class="text-2xl text-pink-300 mt-1"></ion-icon>
+                            </div>
+                            <div>
+                                <p class="text-xl font-semibold">Prenium</p>
+                            </div>
+                        </div>
+                        <p class="text-xs">
+                            Best for teams up to 100 that need to track multiple projects and visualize work in a
+                            variety of ways.
+                        </p>
+                    </a>
+
+                    <a href="#" class="py-5 block border-gray-200 border-b-2 ">
+                        <div class="flex gap-3 mb-4">
+                            <div>
+                                <ion-icon name="podium-outline" class="text-2xl text-blue-600 mt-1"></ion-icon>
+                            </div>
+                            <div>
+                                <p class="text-xl font-semibold">Entreprise</p>
+                            </div>
+                        </div>
+                        <p class="text-xs">
+                            Everything your enterprise teams and admins need to manage projects.
+                        </p>
+                    </a>
+
+                    <div class="bg-[#fffdf5] h-[220px] mx-2 mt-4 px-5 pt-6">
+                        <div class="mb-3 flex gap-3">
+                            <ion-icon name="flash" class="text-2xl text-orange-300 mt-1"></ion-icon>
+                            <h1 class="text-xl font-semibold">Free plan</h1>
+                        </div>
+                        <p class="text-[0.8rem] mb-12">
+                            For individuals or small teams looking to keep work organized.
+                        </p>
+
+                        <a href="#" class="btn_white border-orange-600 hover:bg-orange-100">Take a tour of Trello</a>
+                    </div>
+
+                    <div class="bg-[#f7f5ff] h-[300px] mx-2 mt-4 px-5 pt-6">
+                        <h1 class="text-xl font-semibold mb-3">Compare plans & pricing</h1>
+                        <p class="text-[0.8rem] mb-12">
+                            Whether you’re a team of 2 or 2,000, Trello’s flexible pricing model means you only pay for
+                            what you need.
+                        </p>
+
+                        <a href="#" class="btn_white">Voir tout les cas pratiques</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="submenu4"
+                class="bg-white transition-all duration-300 ease-in-out translate-x-full  h-screen pb-10 w-full px-3 z-40 absolute top-20 overflow-y-scroll">
+                <h1 class="py-5  border-gray-200 border-y-2 font-semibold text-xl">Learn & connect</h1>
+                <div>
+                    <a href="#" class="py-5 block border-gray-200 border-b-2 ">
+                        <div class=" mb-4">
+
+                            <p class="text-xl font-semibold">Trello guide</p>
+
+                        </div>
+                        <p class="text-xs">
+                            Our easy to follow workflow guide will take you from project set-up to Trello expert in no
+                            time.
+                        </p>
+                    </a>
+
+                    <a href="#" class="py-5 block border-gray-200 border-b-2 ">
+                        <div class=" mb-4">
+
+                            <p class="text-xl font-semibold">Remotre work guide</p>
+
+                        </div>
+                        <p class="text-xs">
+                            The complete guide to setting up your team for remote work success.
+                        </p>
+                    </a>
+
+                    <a href="#" class="py-5 block border-gray-200 border-b-2 ">
+                        <div class="mb-4">
+
+                            <p class="text-xl font-semibold">Webinars</p>
+
+                        </div>
+                        <p class="text-xs">
+                            Enjoy our free Trello webinars and become a productivity professional.
+                        </p>
+                    </a>
+
+                    <a href="#" class="py-5 block border-gray-200 border-b-2 ">
+                        <div class=" mb-4">
+
+                            <p class="text-xl font-semibold">Customer stories</p>
+
+                        </div>
+                        <p class="text-xs">
+                            See how businesses have adopted Trello as a vital part of their workflow.
+                        </p>
+                    </a>
+
+                    <a href="#" class="py-5 block border-gray-200 border-b-2 ">
+                        <div class="mb-4">
+
+                            <p class="text-xl font-semibold">Developers</p>
+
+                        </div>
+                        <p class="text-xs">
+                            The sky's the limit in what you can deliver to Trello users in your Power-Up!
+                        </p>
+                    </a>
+
+
+                    <a href="#" class="py-5 block border-gray-200 border-b-2 ">
+                        <div class=" mb-4">
+
+                            <p class="text-xl font-semibold">Help resources</p>
+
+                        </div>
+                        <p class="text-xs">
+                            Need help? Articles and FAQs to get you unstuck.
+                        </p>
+                    </a>
+
+
+                    <div class="bg-[#f7f5ff] h-[280px] mx-2 mt-4 px-5 pt-6">
+                        <h1 class="text-xl font-semibold mb-3">Helping teams work better, together</h1>
+                        <p class="text-[0.8rem] mb-12">
+                            Discover Trello use cases, productivity tips, best practices for team collaboration, and
+                            expert remote work advice..
+                        </p>
+
+                        <a href="#" class="btn_white">Check out the Trello blog</a>
+                    </div>
+
+
+                    <div class="bg-[#f7f5ff] h-[300px] mx-2 mt-4 px-5 pt-6">
+                        <h1 class="text-xl font-semibold mb-3">Helping teams work better, together</h1>
+                        <p class="text-[0.8rem] mb-12">
+                            Discover Trello use cases, productivity tips, best practices for team collaboration, and
+                            expert remote work advice.
+                        </p>
+
+                        <a href="#" class="btn_white">Check out the Trello blog</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- --------------SUBMENU END------------------------- -->
+
+
+    </header>
+    <main class="pt-[80px]">
+        <section class="h-[120px] bg-[#deebff] px-3 py-2 flex items-center relative">
+
+            <p class="text-center">Accelerate your teams' work with Atlassian Intelligence (AI) features 🤖 now
+                available for all Premium and Enterprise!
+
+                <a href="#" class="text-blue-700 underline">Learn more</a>
+            </p>
+
+        </section>
+
+        <section class="h-[850px] pt-40 bg-gradient-to-r from-[#7846ac] to-[#d34eb2] px-3 text-white flex relative">
+            <div class="custom-shape-divider-bottom-1715594030">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path
+                        d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                        class="shape-fill"></path>
+                </svg>
+            </div>
+            <div class="flex flex-col gap-4">
+                <h1 class=" text-3xl text-center font-semibold">Trello rassemble vos tâches, vos coéquipiers et vos
+                    outils</h1>
+                <p class="text-center text-2xl mb-5">Centralisez tout votre contenu, même dans une équipe distribuée.
+                </p>
+                <a href="#"
+                    class="butn_blue rounded-md hover:bg-blue-900 text-center transition-all duration-300 ease-in-out">Inscrivez-vous,
+                    c'est gratuit !</a>
+                <div class="flex gap-3 justify-center group transition-all duration-300 ease-in-out">
+                    <button class="underline group-hover:mr-2 transition-all duration-300 ease-in-out">Visionner la
+                        video</button>
+                    <ion-icon name="play-circle-outline" class="text-white text-3xl mt-1 font-bold"></ion-icon>
+                </div>
+                <div>
+                    <img src="../assets/images/TrelloUICollage_4x_1.png" alt="" class="z-40 absolute bottom-[-40px]">
+                </div>
+
+                <div id="video-popup" class="">
+                    <video src=""></video>
+                </div>
+            </div>
+        </section>
+
+        <section class="h-auto  bg-white  pt-10">
+            <h2 class="uppercase text-xl font-semibold px-3">Initiation à trello</h2>
+            <h1 class="text-3xl font-semibold mt-2 mb-5 px-3">Un centre de productivité</h1>
+            <p class="mb-10  px-3">Simples, flexibles et puissants. Les tableaux, les listes et les cartes suffisent
+                pour obtenir une vue claire de qui fait quoi et des tâches qu'il vous reste à faire. Découvrez-en plus
+                dans notre
+
+                <a href="#" class="text-blue-700 underline">guide de mise en route.</a>
+            </p>
+            <div id="div-slider" class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <div class="slide-content">
+                                <div class="rounded-md">
+                                    <img src="../assets/images/Carousel_Image_Boards_2x.png" alt="" class="rounded-md">
+                                </div>
+                                <div class="flex gap-0 w-full">
+                                    <div class="h-[210px] w-10 bg-cyan-500 rounded-l-md">
+
+                                    </div>
+                                    <div class="h-[210px] bg-white px-3 pt-5">
+                                        <h3 class="font-semibold mb-2">LISTES</h3>
+                                        <p>Définissez les différentes phases d'une tâche. Au début, ne cherchez pas plus
+                                            loin que «&nbsp;À faire&nbsp;», «&nbsp;En cours&nbsp;» et
+                                            «&nbsp;Terminé&nbsp;». Vous pouvez aussi élaborer un flux de travail
+                                            personnalisé pour répondre aux besoins de votre équipe. Il n'y a pas de
+                                            mauvaise façon de faire dans Trello.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="splide__slide">
+                            <div class="slide-content">
+                                <div class="rounded-md">
+                                    <img src="../assets/images/Carousel_Image_Lists_2x.png" alt="" class="rounded-md">
+                                </div>
+                                <div class="flex gap-0 w-full">
+                                    <div class="h-[200px] w-8 bg-cyan-500 rounded-l-md">
+
+                                    </div>
+                                    <div class="h-[200px] bg-white px-3 pt-5">
+                                        <h3 class="font-semibold mb-2">Tableaux</h3>
+                                        <p>Les tableaux&nbsp;Trello garantissent l'organisation des tâches et font
+                                            avancer le travail. Découvrez en un coup d'œil toutes les tâches à réaliser
+                                            et terminées.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="splide__slide">
+                            <div class="slide-content">
+                                <div class="rounded-md">
+                                    <img src="../assets/images/Carousel_Image_Cards_2x.png" alt="" class="rounded-md">
+                                </div>
+                                <div class="flex gap-0 w-full">
+                                    <div class="h-[210px] w-10 bg-cyan-500 rounded-l-md">
+
+                                    </div>
+                                    <div class="h-[210px] bg-white px-3 pt-5">
+                                        <h3 class="font-semibold mb-2">Cartes</h3>
+                                        <p>Les cartes représentent des tâches et des idées, et peuvent contenir toutes
+                                            les informations nécessaires pour faire votre travail. À mesure que vous
+                                            avancez, déplacez les cartes dans les listes pour afficher leur état.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Add more slides as needed -->
+                    </ul>
+                </div>
+                <div class="splide__pagination mb-14"></div> <!-- Pagination container -->
+            </div>
+        </section>
+
+        <section class="h-auto pb-20 pt-10 pl-3 bg-white">
+            <h2 class="uppercase text-xl font-semibold px-3">Trello en action</h2>
+            <h1 class="text-3xl font-semibold mt-2 mb-5 px-3">Des flux de travail pour les projets de toutes envergures
+            </h1>
+
+            <div id="div-slider-2" class="splide splide2">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <div class="slide-content">Content for Slider 2 - Slide 1</div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="slide-content">Content for Slider 2 - Slide 2</div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="slide-content">Content for Slider 2 - Slide 3</div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Add the progress bar element -->
+                <div class="my-carousel-progress">
+                    <div class="my-carousel-progress-bar"></div>
+                </div>
+            </div>
+        </section>
+
+        <section  class="h-[1200px] pb-20 pt-10 px-3 bg-blue-400 flex flex-col place-items-center">
+            <h2  class=" text-2xl font-semibold px-3 mb-3 text-white text-center">See work in a whole new way</h2>
+            <p class="text-center text-white text-xl mb-8">
+                View your team’s projects from every angle and bring a fresh perspective to the task at hand.
+            </p>
+
+            <a href="#" class="btn_white  border-none  bg-white ">Discover all Trello views</a>
+            <div class="flex flex-col place-items-center">
+                <div class="w-full h-auto pb-10 mt-8 rounded-md px-6 pt-5 bg-white ">
+                    <img src="../assets/images/TrelloBoard_Timeline_2x.png" alt="" class="">
+                    <h3 class="pt-6 pb-8 font-semibold">HIT DEADLINES EVERY TIME</h3>
+                    <p class="mb-5"> From weekly sprints to annual planning, Timeline view keeps all tasks on track. Quickly get a glimpse of what’s coming down the pipeline and identify any gaps that might impede your team’s progress.</p>
+                    <a href="#" class="underline text-blue-700 hover:text-blue-900 transition-all duration-300 ease-in-out">Learn more about Timeline view</a>
+                </div>
+    
+                <div class="w-full h-auto pb-10 mt-8 rounded-md px-6 pt-5 shadow-2xl bg-white ">
+                    <img src="../assets/images/TrelloBoard_Calendar_2x.png" alt="" class="">
+                    <h3 class="pt-6 pb-8 font-semibold">STAY ON TOP OF TASKS</h3>
+                    <p class="mb-5">Start each day without any surprises. Whether scheduling an editorial calendar or staying on top of to-dos, Calendar view is like a crystal ball giving you a clear vision of what work lies ahead.</p>
+                    <a href="#" class="underline text-blue-700 hover:text-blue-900 transition-all duration-300 ease-in-out">Learn more about Calendar view</a>
+                </div>
+            </div>
+        </section>
+
+        <section  class="h-auto pb-20 pt-32 px-3 bg-white">
+            <h2 class="uppercase mb-2 font-semibold">POWERFUL WAYS TO GROW</h2>
+            <h1 class="text-2xl font-semibold">Do more with Trello</h1>
+            <p class="text-xl mt-5">
+                Trello’s intuitive features give any team the ability to quickly set up and customize workflows for just about anything.
+            </p>
+            <div class="flex flex-col gap-8 mt-10">
+                <div class=" w-full h-auto pb-10 bg-slate-100 px-5 py-5 rounded-md">
+                    <img src="../assets/images/Integrations_Puzzle.svg" alt="" class="">
+                    <h3 class="text-xl font-semibold py-3">Integrations</h3>
+                    <p class="pb-10">
+                        Connect the apps your team already uses into your Trello workflow or add a Power-Up to fine-tune your specific needs.
+                    </p>
+                    <a href="#" class="btn_white border-blue-500">Browse Integrations</a>
+                </div>
+
+                <div class=" w-full h-auto pb-10 bg-slate-100 px-5 py-5 rounded-md">
+                    <img src="../assets/images/Gears.svg" alt="" class="">
+                    <h3 class="text-xl font-semibold py-3">Butler Automation</h3>
+                    <p class="pb-10">
+                        No-code automation is built into every Trello board. Focus on the work that matters most and let the robots do the rest.
+                    </p>
+                    <a href="#" class="btn_white border-blue-500">Get to know Automation</a>
+                </div>
+
+                <div class=" w-full h-auto pb-10 bg-slate-100 px-5 py-5 rounded-md">
+                    <img src="../assets/images/Search_Value.svg" alt="" class="">
+                    <h3 class="text-xl font-semibold py-3">Trello Enterprise</h3>
+                    <p class="pb-10">
+                        The productivity tool teams love, paired with the features and security needed for scale.
+                    </p>
+                    <a href="#" class="btn_white border-blue-500">Explore Enterprise</a>
+                </div>
+            </div>
+        </section>
+
+        <section  class="h-auto pb-20 pt-32 px-3 bg-[#e7fcff]">
+            <div id="div-slider3" class="splide splide3">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <div class="slide-content gap-0 relative h-[790px]">
+                             <div class="h-[75%] rounded-t-md bg-white  px-5 py-5"  style="background-image: url(../assets/images/Quotes.svg); background-repeat: no-repeat; background-size: 750px;">
+                                <p class="text-2xl mb-8">
+                                    [Trello est] idéal pour simplifier les processus complexes. En tant que responsable, je peux scinder [les processus] en petits blocs pour mon équipe, puis les déléguer, tout en gardant une vue d'ensemble.
+                                </p>
+
+                                <hr class="w-36 border border-black">
+                                <p class="mt-8">Joey Rosenberg</p>
+                                <p class="mb-5">Global Leadership Director chez Women Who Code</p>
+                                <img src="../assets/images/WomenWhoCode_logo.svg" alt="" class="mb-5">
+                                <a href="#"  class="underline text-blue-700 hover:text-blue-900 transition-all duration-300 ease-in-out">Lire le témoignage</a>
+                             </div>
+                             <div class="h-[25%] p-5 bg-gradient-to-r from-[#7846ac] to-[#d34eb2] rounded-b-md">
+                                <p class="text-white text-xl mb-5">75&nbsp;% des organisations indiquent que Trello apporte de la valeur à leurs activités dans les 30&nbsp;jours.</p>
+                                <a href="#"  class="underline text-white hover:text-blue-900 transition-all duration-300 ease-in-out">Enquête TechValidate sur Trello</a>
+                             </div>
+                            </div>
+                        </li>
+
+                        <li class="splide__slide">
+                            <div class="slide-content gap-0 relative h-[790px]">
+                             <div class="h-[60%] rounded-t-md bg-white  px-5 py-5"  style="background-image: url(../assets/images/Quotes.svg); background-repeat: no-repeat; background-size: 750px;">
+                                <p class="text-2xl mb-8">
+                                    Au bureau, depuis chez soi ou sur site avec un client, tout le monde peut partager du contexte et des informations via Trello.
+                                </p>
+
+                                <hr class="w-36 border border-black">
+                                <p class="mt-8">Sumeet Moghe</p>
+                                <p class="mb-5">Product Manager chez ThoughtWorks</p>
+                                <img src="../assets/images/thoughtworks.svg" alt="" class="mb-5 w-[200px]">
+                                <a href="#"  class="underline text-blue-700 hover:text-blue-900 transition-all duration-300 ease-in-out">Lire le témoignage</a>
+                             </div>
+                             <div class="h-[40%] flex justify-between flex-col p-5 bg-gradient-to-r from-[#7846ac] to-[#d34eb2] rounded-b-md">
+                                <p class="text-white text-xl mb-5">81 % des clients ont choisi Trello pour sa facilité d'utilisation.</p>
+                                <a href="#"  class="underline text-white hover:text-blue-900 transition-all duration-300 ease-in-out">Enquête TechValidate sur Trello</a>
+                             </div>
+                            </div>
+                        </li>
+
+                        <li class="splide__slide">
+                            <div class="slide-content gap-0 relative h-[790px]">
+                             <div class="h-[75%] rounded-t-md bg-white  px-5 py-5"  style="background-image: url(../assets/images/Quotes.svg); background-repeat: no-repeat; background-size: 750px;">
+                                <p class="text-2xl mb-8">
+                                    Nous avons utilisé Trello pour clarifier les étapes, les exigences et les procédures. C'était fantastique pour communiquer avec des équipes que des fossés culturels et linguistiques séparent.
+                                </p>
+
+                                <hr class="w-36 border border-black">
+                                <p class="mt-8">Jefferson Scomacao</p>
+                                <p class="mb-5">Development Manager chez IKEA/PTC</p>
+                                <img src="../assets/images/ptc-logo.svg" alt="" class="mb-5 w-[100px]">
+                                <a href="#"  class="underline text-blue-700 hover:text-blue-900 transition-all duration-300 ease-in-out">Lire le témoignage</a>
+                             </div>
+                             <div class="h-[25%] flex justify-between flex-col p-5 bg-gradient-to-r from-[#7846ac] to-[#d34eb2] rounded-b-md">
+                                <p class="text-white text-xl mb-5">74 % des clients disent que Trello a amélioré la communication avec leurs collègues et leurs équipes.</p>
+                                <a href="#"  class="underline text-white hover:text-blue-900 transition-all duration-300 ease-in-out">Enquête TechValidate sur Trello</a>
+                             </div>
+                            </div>
+                        </li>
+                        <!-- Add more slides as needed -->
+                    </ul>
+                </div>
+                <div class="splide__pagination mb-14"></div> <!-- Pagination container -->
+              
+            </div>
+          <div class="flex flex-col gap-2 place-items-center">
+            <h1 class="text-2xl font-semibold">Trello, à des tarifs sur mesure</h1>
+            <p class="text-xl text-center">
+                Utilisé par des millions de personnes, Trello booste les équipes à travers le monde.
+                
+                </p>
+
+            <a href="#" class="butn_blue hover:bg-blue-800 transition-all duration-300 ease-in-out rounded-md px-14">Comparaison des offres</a>
+          </div>
+        </section>
+
+        <section  class="h-auto pb-20  px-3 bg-[#e7fcff]">
+            <div class="flex flex-col gap-5">
+                <div class="h-[320px] px-4 py-5 text-black bg-white border flex flex-col gap-5">
+                    <h1 class="font-bold">GRATUIT</h1>
+                    <div>
+                        <p>$ <span class="text-5xl">0</span> USD</p>
+                    <p class="text-xs text-gray-500">Gratuit pour toute votre équipe</p>
+                    </div>
+                    <p>
+                        Pour les personnes ou les équipes qui cherchent à organiser toute sorte de projets.
+                    </p>
+                    <a href="#" class="btn_white w-fit border-blue-400">Démarrer</a>
+                </div>
+
+                <div class="h-[370px] px-4 py-5 text-black bg-white border flex flex-col gap-5">
+                    <h1 class="font-bold">STANDARD</h1>
+                    <div>
+                        <p>$ <span class="text-5xl">5</span> USD</p>
+                    <p class="text-xs text-gray-500">par utilisateur et par mois en cas de facturation annuelle ($6 facturés mensuellement)</p>
+                    </div>
+                    <p>
+                        Pour les petites équipes qui doivent gérer le travail et faire évoluer la collaboration.
+                    </p>
+                    <a href="#" class="btn_white w-fit border-blue-400">S'inscrire</a>
+                    <a href="#" class="underline text-blue-700 hover:text-blue-900 transition-all duration-300 ease-in-out">En savoir plus sur Standard</a>
+                </div>
+
+                <div class="h-[440px] px-4 py-5 text-black bg-white border border-blue-500 flex flex-col gap-5">
+                    <h1 class="font-bold">PREMIUM</h1>
+                    <div>
+                        <p>$ <span class="text-5xl">10</span> USD</p>
+                    <p class="text-xs text-gray-500">par utilisateur et par mois en cas de facturation annuelle ($12.50 facturés mensuellement)</p>
+                    </div>
+                    <p>
+                        Pour les équipes qui ont besoin de suivre et de visualiser plusieurs projets de différentes manières, y compris des tableaux, des chronologies, des calendriers, et bien plus encore.
+                    </p>
+                    <a href="#" class="btn_white bg-indigo-100 hover:bg-white w-fit border-blue-400">Essayer gratuitement</a>
+                    <a href="#" class="underline text-blue-700 hover:text-blue-900 transition-all duration-300 ease-in-out">En savoir plus sur Premium</a>
+                </div>
+
+                <div class="h-auto px-4 pt-5 pb-8 text-black bg-white border flex flex-col gap-5">
+                    <h1 class="font-bold">ENTREPRISE</h1>
+                    <div>
+                        <p  class="slider-value">$ <span id="moneyValue" class="text-5xl">17.50</span> USD</p>
+                    <p class="text-xs text-gray-500">par utilisateur et par mois, facturation annuelle ($210.00 prix annuel par utilisateur)</p>
+                    </div>
+                    <p>
+                        Pour les organisations qui cherchent à connecter le travail entre les équipes, tout en améliorant la sécurité et les contrôles.
+                    </p>
+                    <div class="slider-value">Cout estimer pour <span id="sliderValue" class="pb-1 border-b-2 border-black">50</span> utilisateurs</div>
+                    <input type="range" id="rangeSlider" min="0" max="100" value="0" oninput="updateSliderValue()">
+                    <div id="hid" class=" gap-1 hidden">
+                       <div class="flex">
+                        <ion-icon name="alert-circle" class="text-xl"></ion-icon>
+                        <p>Pour plus de 5000 utilisateurs, contactez le service commercial afin de connaître les tarifs</p>
+                       </div>
+                    </div>
+                    <a href="#" class="btn_white  w-fit border-blue-400">Contacter le service commercial</a>
+                    <a href="#" class="underline text-blue-700 hover:text-blue-900 transition-all duration-300 ease-in-out">En savoir plus sur commercial</a>
+                </div>
+               
+        </section>
+    </main>
+    <footer></footer>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+</body>
+
+</html>
